@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "watch": true,
+    "lib": ["dom", "es2017"],
+//    "module": "es2015",
+    "esModuleInterop": true
+  }
+}
