@@ -21,4 +21,4 @@ class LinearSearch {
 }
 
 const SEARCH_LINEAR = new LinearSearch(['monday', 'tuesday', 'wednesday', 'thur', 'fr'])
-console.log(SEARCH_LINEAR.indexOf('wednesdayfd'));
+console.log(SEARCH_LINEAR.indexOf('wednesday'));

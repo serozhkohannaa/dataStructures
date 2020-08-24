@@ -9,8 +9,8 @@ class BinarySearch {
   indexOf(target: number) {
 	const array = this.array ? this.array : [];
 
-	let startItem = 0
-	let maxItems = array.length
+	let startItem = 0;
+	let maxItems = array.length;
 
 	while (startItem <= maxItems) {
 	  const middleValue= Math.floor((startItem + maxItems) / 2)
