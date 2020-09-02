@@ -22,6 +22,3 @@ export class bubbleSort {
 	return this.array;
   }
 }
-
-const SORT = new bubbleSort([1, 100, 45, 3, 5, 7, 8, 5, 4, 3, -5]);
-console.log(SORT.isSort())

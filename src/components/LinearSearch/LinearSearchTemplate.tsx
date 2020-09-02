@@ -12,14 +12,15 @@ const LinearSearchTemplate: FC<Props> = ({numbersInput, numberFind }) => {
 
   const handleSubmit = (e: FormEvent) => {
 	e.preventDefault();
-	setArray(numbersInput?.value.split(' '));
+	let numberArray = numbersInput?.value.split(' ').map(item => +item);
+	setArray(numberArray);
 	setFind(numberFind?.value);
   }
 
   const renderFind = () => {
 	const SEARCH = new LinearSearch(array || []);
 	return <div className='field'>
-	  <p>POSITION: <span>{SEARCH.indexOf(findNumber)}</span></p>
+	  <p>POSITION: <span>{SEARCH.indexOf(+findNumber)}</span></p>
 	</div>
   }
 

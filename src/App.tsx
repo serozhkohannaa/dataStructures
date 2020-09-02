@@ -3,6 +3,7 @@ import './App.scss';
 
 import BinarySearchTemplate from "./components/BinarySearch/BinarySearchTemplate";
 import LinearSearchTemplate from "./components/LinearSearch/LinearSearchTemplate";
+import BubleSortTemplate from "./components/BubleSort/BubleSortTemplate";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </div>
       <LinearSearchTemplate/>
       <BinarySearchTemplate/>
+      <BubleSortTemplate/>
     </main>
   );
 }
