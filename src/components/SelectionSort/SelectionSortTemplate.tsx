@@ -1,11 +1,11 @@
 import React, { FC, FormEvent, Fragment, useState } from 'react';
-import { bubbleSort } from "./BubleSort";
+import { selectionSort } from "./SelectionSort";
 
 interface Props {
   numbersInput?: HTMLInputElement | null;
 }
 
-const BubleSortTemplate: FC<Props> = ({numbersInput}) => {
+const SelectionSortTemplate: FC<Props> = ({numbersInput}) => {
   let [array, setArray] = useState();
 
   const handleSubmit = (e: FormEvent) => {
@@ -15,7 +15,7 @@ const BubleSortTemplate: FC<Props> = ({numbersInput}) => {
   }
 
   const renderFind = () => {
-	const SORT = new bubbleSort(array || []);
+	const SORT = new selectionSort(array || []);
 	return <div className='field'>
 	  <p>Sorted: {SORT.isSort().join(' ')}</p>
 	</div>
@@ -24,11 +24,11 @@ const BubleSortTemplate: FC<Props> = ({numbersInput}) => {
   return <section className='section'>
 	<div className="content">
 	  <div className="title-component">
-		<h4>Bubble sort</h4>
+		<h4>Selection sort</h4>
 	  </div>
 	  <div className="description-component">
 		<div className="field is-transparent">
-		  <p>Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
+		  <p>In computer science, selection sort is an in-place comparison sorting algorithm. It has an O(n²) time complexity, which makes it inefficient on large lists, and generally performs worse than the similar insertion sort.</p>
 		</div>
 		<div className="field">
 		  <p>Average complexity: n^2</p>
@@ -44,7 +44,7 @@ const BubleSortTemplate: FC<Props> = ({numbersInput}) => {
 
 	<textarea className="code-sample">
 	  {
-	    `export class bubbleSort {
+	    `export class selectionSort {
   array: number[];
 
   constructor(numbers: number[]) {
@@ -55,22 +55,26 @@ const BubleSortTemplate: FC<Props> = ({numbersInput}) => {
 \tlet startItem = 0;
 \tlet maxItems = this.array.length;
 
-\tfor (startItem; startItem < maxItems; startItem++) {
-\t  for (let j = 0; j < maxItems - 1; j++) {
+\tfor (startItem; startItem < maxItems - 1; startItem++) {
+\t  let minValueIndex = startItem;
 
-\t\tif (this.array[j] > this.array[j + 1]) {
-\t\t  let swap = this.array[j];
-\t\t  this.array[j] = this.array[j + 1];
-\t\t  this.array[j + 1] = swap;
+\t  for (let j = startItem + 1; j < maxItems; j++) {
+\t\tif (this.array[j] < this.array[minValueIndex]) {
+\t\t  minValueIndex = j;
 \t\t}
 \t  }
+
+\t  const temp = this.array[minValueIndex];
+\t  this.array[minValueIndex] = this.array[startItem];
+\t  this.array[startItem] = temp;
 \t}
 \treturn this.array;
   }
-}`
+}
+`
 	  }
     </textarea>
   </section>
 }
 
-export default  BubleSortTemplate;
+export default SelectionSortTemplate;
