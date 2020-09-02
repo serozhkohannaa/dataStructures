@@ -26,20 +26,21 @@ export class QueueDataStructure<T> {
 	}
   }
 
-  public dequeue(): T {
+  public dequeue() {
 	if (this.isEmpty()) {
 	  console.log('The queue is empty')
 	}
 
 	const shiftItem = this.queue[0];
 
-	this.queue.forEach((item, i) => {
-	  this.queue[i] = this.queue[i + 1];
+	let data = this.queue.map((item, i) => {
+	  return this.queue[i] = this.queue[i + 1];
 	})
 
-	this.length--;
+	// this.length--;
 
-	return shiftItem;
+	return data;
+	// return this.queue;
   }
 
   public peek(): T {
@@ -49,25 +50,27 @@ export class QueueDataStructure<T> {
 	return this.queue[0];
   }
 
-  public queueContents(): void {
-	console.log(`Queue content, amount ${this.length}`);
+  public queueContents() {
+	// console.log(`Queue content, amount ${this.length}`);
 	this.length !== 0 && this.queue.forEach((item, i) => console.log(`was entered: ${i}, itemValue: ${item}`));
+	// return `Queue content, amount ${this.length}`;
+	return this.queue;
   }
 }
 
 //IMPLEMENTATION
-export const QUEUE = new QueueDataStructure<number>(10);
-
-while (!QUEUE.isFull()) {
-  QUEUE.enqueue(Math.round(Math.random() * 100));
-}
-QUEUE.queueContents();
-
-console.log('--------------')
-console.log(QUEUE.peek());
-
-console.log('--------------')
-// while (!QUEUE.isEmpty()) {
-//   // console.log(`was removed: ${length++}, itemValue: ${QUEUE.dequeue()} `);
+// export const QUEUE = new QueueDataStructure<number>(10);
+//
+// while (!QUEUE.isFull()) {
+//   QUEUE.enqueue(Math.round(Math.random() * 100));
 // }
-QUEUE.queueContents();
+// QUEUE.queueContents();
+//
+// console.log('--------------')
+// console.log(QUEUE.peek());
+//
+// console.log('--------------')
+// // while (!QUEUE.isEmpty()) {
+// //   // console.log(`was removed: ${length++}, itemValue: ${QUEUE.dequeue()} `);
+// // }
+// QUEUE.queueContents();
