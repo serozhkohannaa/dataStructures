@@ -7,3 +7,78 @@ body {
   font-family: system-ui;
 }
 
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  .page-title {
+    margin-bottom: 50px;
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+  display: flex;
+
+  .code-sample {
+    margin-left: 50px;
+  }
+}
+
+.code-sample {
+  padding: 10px;
+  background: rgba(#5e5e5e, .1);
+  width: 100%;
+  border: none;
+  font-family: Courier;
+  font-size: 10px;
+}
+
+.title-component {
+  margin-bottom: 20px;
+}
+
+.form-component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 12px;
+    margin-bottom: 3px;
+    letter-spacing: .2px;
+  }
+
+  input {
+    margin-bottom: 20px;
+    padding: 3px 5px;
+  }
+
+  button {
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    border: 1px solid black;
+  }
+}
+
+.field {
+  width: 550px;
+  background: rgba(#9ad9c5, .3);
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+
+  &.is-transparent {
+    background: transparent;
+    font-weight: 400;
+  }
+}

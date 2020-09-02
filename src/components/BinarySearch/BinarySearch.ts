@@ -26,7 +26,3 @@ export class BinarySearch {
 	return 'Not found'
   }
 }
-
-// const SEARCH = new BinarySearch([1, 3, 44, 5, 6, 3]);
-
-// console.log(SEARCH.indexOf(3));
