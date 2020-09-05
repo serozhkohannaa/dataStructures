@@ -20,6 +20,7 @@ const BinarySearchTemplate: FC<Props> = ({numbersInput, numberFind}) => {
   const renderFind = () => {
     const SEARCH = new BinarySearch(array || []);
     return <div className='field'>
+      <p>SORTED ARRAY: <span>{SEARCH.array.join(' ')}</span></p>
       <p>POSITION: <span>{SEARCH.indexOf(+findNumber)}</span></p>
     </div>
   }
