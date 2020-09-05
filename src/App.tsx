@@ -7,6 +7,7 @@ import BubleSortTemplate from "./components/BubleSort/BubleSortTemplate";
 import InsertionSortTemplate from "./components/InsertionSort/InsertionSortTemplate";
 import SelectionSortTemplate from "./components/SelectionSort/SelectionSortTemplate";
 import QueueDataStructureT from "./components/QueueDataStructure/QueueDataStructureT";
+import StackDataStrucureT from "./components/StackDataStructure/StackDataStructureT";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <h2>Data Structures</h2>
       </div>
       <QueueDataStructureT/>
+      <StackDataStrucureT/>
     </main>
   );
 }
