@@ -1,6 +1,5 @@
 import React, { FC, FormEvent, useState } from 'react';
 import { StackDataStructure } from "./StackDataStructure";
-import { QueueDataStructure } from "../QueueDataStructure/QueueDataStructure";
 
 interface Props {
   numbersInput?: HTMLInputElement | null;
