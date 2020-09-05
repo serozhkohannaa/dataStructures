@@ -8,6 +8,7 @@ import InsertionSortTemplate from "./components/InsertionSort/InsertionSortTempl
 import SelectionSortTemplate from "./components/SelectionSort/SelectionSortTemplate";
 import QueueDataStructureT from "./components/QueueDataStructure/QueueDataStructureT";
 import StackDataStrucureT from "./components/StackDataStructure/StackDataStructureT";
+import LinkedListDataStructureT from "./components/LinkedListDataStructure/LinkedListDataStructureT";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       </div>
       <QueueDataStructureT/>
       <StackDataStrucureT/>
+      {/*<LinkedListDataStructureT/>*/}
     </main>
   );
 }
