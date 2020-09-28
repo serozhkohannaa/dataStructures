@@ -28,7 +28,7 @@ const BinarySearchTemplate: FC<Props> = ({numbersInput, numberFind}) => {
   return <section className='section section-binary-search'>
   <div className="content">
     <div className="title-component">
-      <h4>Binary search</h4>
+      <h4 data-testid='template-title'>Binary search</h4>
     </div>
     <div className="description-component">
       <div className="field is-transparent">
